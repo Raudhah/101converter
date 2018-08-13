@@ -44,10 +44,10 @@ for(var i=0; i < links.length; i++) {
 
 <!--scripts loaded here-->
 
-<script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="<?php echo $BASE_URL;?>js/jquery.min.js"></script>
+<script src="<?php echo $BASE_URL;?>js/bootstrap.min.js"></script>
 
-<script src="js/101converter.js"></script>
+<script src="<?php echo $BASE_URL;?>js/101converter.js"></script>
 
 
 

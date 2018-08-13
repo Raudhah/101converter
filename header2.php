@@ -2,8 +2,8 @@
 
   <!--stylesheets / link tags loaded here-->
 
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/101converter.css" />
+  <link rel="stylesheet" href="<?php echo $BASE_URL;?>css/bootstrap.min.css" />
+  <link rel="stylesheet" href="<?php echo $BASE_URL;?>css/101converter.css" />
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
