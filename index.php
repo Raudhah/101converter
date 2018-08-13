@@ -1,8 +1,6 @@
 <?php
-<<<<<<< HEAD
+
   include "config.php";
-=======
->>>>>>> 61788b423be06c0ecffd487d91f03474b2cb0e63
   include "header1.php";
   //html title and meta
 ?>
