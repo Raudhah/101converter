@@ -217,9 +217,8 @@ body {
 
 
 .footer-wrap {
-    background: url(http://hassandesigns.top/html/classified/images/footer-bg.jpg) no-repeat top;
+    background: url(../images/footer-bg.png) repeat top;
     padding-top: 30px;
-    background-size: cover;
 }
 
 .footer-wrap h3 {
