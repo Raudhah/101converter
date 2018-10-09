@@ -107,3 +107,28 @@ for(var i=0; i < links.length; i++) {
 
 </body>
 </html>
+
+<script>
+  //copy to clipboard button
+           function copyResult(){
+
+             /* Get the text field */
+              var copyText = document.getElementById("convertResult");
+
+              /* Select the text field */
+              copyText.select();
+
+              /* Copy the text inside the text field */
+              document.execCommand("copy");
+
+              /* Alert the copied text */
+              alert("Success Copied the Result : " + copyText.value);
+           }
+
+           $( "#copybutton" ).click(function() {
+             copyResult();
+           });
+
+
+</script>
+

@@ -22,80 +22,39 @@
                   <li><a href="<?php echo $BASE_URL;?>">Home</a></li>
                   <li><a href="<?php echo $BASE_UNIT_URL;?>">Unit Converter</a></li>
                   <li><a href="<?php echo $UNIT_TEMPERATURE_URL;?>">Temperature</a></li>
-                  <li class="active">Fahrenheit to Celsius</li>
+                  <li class="active">Temperature Menu</li>
                 </ol>
 
                 <!-- THIS IS THE PROGRAM PART -->
 
-                  <h2 id="sec0">Converter Fahrenheit to Celsius</h2>
-                  Convert Fahrenheit to Celcius Online here. See also how it works, how to do it manually, and More! Even the source code is available here.
-
+                  <h2 id="sec0">Temperature Converter</h2>
+                  Convert Anything about temperature here.
                   <hr/>
 
 
                   <div class="row">
                     <div class="col-md-12">
-                        <strong><em>
-                        Please input The temperature in Fahrenheit below. Click Convert to see the result. You can copy the result to clipboard.
-                        </em></strong>
-                      <br/>
-                      <br/>
-
-                        <form class="form-horizontal">
-
-                          <div class="form-group">
-                            <label for="inputEmail3" class="col-sm-2 control-label">Temperature in Fahrenheit</label>
-                            <div class="col-sm-10">
-                              <input type="number" class="form-control input-lg" id="inputTempF" placeholder="Enter Temperature">
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
-                              <button  id="convertbutton"  type="button" class="btn btn-success btn-lg">Convert</button>
-                            </div>
-                          </div>
-
-                          <div class="form-group">
-                           <label class="col-sm-2 control-label">Result</label>
-                           <div class="col-sm-10">
-
-                              <div class="input-group">
-                               <input type="text" readonly class="form-control input-lg" id="convertResult" placeholder="Result">
-                               <span class="input-group-addon" id="basic-addon2">Celsius</span>
-                              </div>
-
-
-                             <button id="copybutton" data-toggle="tooltip" title="Copy the Result to Clipboard" data-clipboard-target="#result" type="button" class="btn btn-primary btn-xs">Copy The Result</button>
-
-                             </p>
-                           </div>
-                         </div>
-                        </form>
-
-
+                       
+                      <table class="table table-striped table-hover">
+                        <tr><td>Celsius to Fahrenheit</td></tr>
+                        <tr><td>Celsius to Kelvin</td></tr>
+                        <tr><td>Celsius to Reamur</td></tr>
+                        <tr><td><a href="converter-fahrenheit-to-celsius.php" target="_blank">Fahrenheit to Celsius</a></td></tr>
+                        <tr><td>Fahrenheit to Reamur</td></tr>
+                        <tr><td>Fahrenheit to Kelvin</td></tr>
+                        <tr><td>Kelvin to Celsius</td></tr>
+                        <tr><td>Kelvin to Fahrenheit</td></tr>
+                        <tr><td>Kelvin to Reamur</td></tr>
+                        <tr><td>Reamur to Celsius</td></tr>
+                        <tr><td>Reamur to Fahrenheit</td></tr>
+                        <tr><td>Reamur to Kelvin</td></tr>
+                        
+                      </table>
 
                     </div>
                   </div>
 
                   <hr class="col-md-12">
-
-
-                    <!-- THIS IS THE FORMULA PART -->
-
-                    <div class="row">
-                      <div class="col-md-10">
-                        <div class="panel panel-primary">
-                          <div class="panel-heading"><h4><strong>THE FORMULA</strong></h4></div>
-                          <div class="panel-body">
-                            <p>Temp Celsius = (Temp Fahranheit * 5 / 9) - 32</p>
-
-                            e.g. You've got 100 degree Fahrenheit.
-                            to calculate it would be 
-
-                          </div>
-                        </div>
-                      </div>
 
 
                   <!-- THIS IS THE DESCRIPTION ABOUT HOW IT WORKS PART -->
@@ -107,16 +66,24 @@
                         <div class="panel-body">
                           <p>in this part we explain on how it all works. </p>
 
-                          <blockquote>
-                            Who use Fahrenheit? : 
-                            today only few which use fahrenheit as code. 
-
-                          </blockquote>
-
 
                         </div>
                       </div>
                     </div>
+
+                    <!-- THIS IS THE FORMULA PART -->
+
+                    <div class="row">
+                      <div class="col-md-10">
+                        <div class="panel panel-primary">
+                          <div class="panel-heading"><h4><strong>THE FORMULA</strong></h4></div>
+                          <div class="panel-body">
+                            <p>Temp Celsius = (Temp Fahranheit * 9 / 5) + 32</p>
+
+                          </div>
+                        </div>
+                      </div>
+
 
                     <!-- THIS IS THE SOURCE CODE -->
 
@@ -153,7 +120,7 @@
            function convertFahrenheitToCelsius(tempF){
 
              var tempC;
-             tempC = (tempF * 5.0) / 9.0 - 32;
+             tempC = (9.0 * tempF / 5.0) + 32;
              return tempC;
            }
 
@@ -171,6 +138,26 @@
 
            });
 
-           
+           //copy to clipboard button
+           function copyResult(){
+
+             /* Get the text field */
+              var copyText = document.getElementById("convertResult");
+
+              /* Select the text field */
+              copyText.select();
+
+              /* Copy the text inside the text field */
+              document.execCommand("copy");
+
+              /* Alert the copied text */
+              alert("Success Copied the Result : " + copyText.value);
+           }
+
+           $( "#copybutton" ).click(function() {
+             copyResult();
+           });
+
+
 
        </script>

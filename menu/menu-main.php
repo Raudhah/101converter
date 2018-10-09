@@ -23,16 +23,8 @@
                             <li><a href="#">Length Converter</a></li>
                             <li><a href="#">Weight Converter</a></li>
                             <li><a href="#">Volume Converter</a></li>
-                            <li><a href="#">Temperature Converter</a></li>
+                            <li><a href="<?php echo $UNIT_TEMPERATURE_URL;?>">Temperature Converter</a></li>
 
-                            <li  data-toggle="collapse" data-target="#subproducts" class="collapsed active">
-                              <a href="#">UI Elements <span class="arrow"></span></a>
-                            </li>
-                            <ul class="subsubmenu collapse" id="subproducts">
-                                <li class="active"><a href="#">CSS3 Animation</a></li>
-                                <li><a href="#">General</a></li>
-                                <li><a href="#">Buttons</a></li>
-                            </ul>
 
                         </ul>
 
